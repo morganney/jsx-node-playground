@@ -1,0 +1,29 @@
+{
+  "name": "jsx-node-playground",
+  "version": "1.0.0",
+  "description": "Playground for @knighted/jsx in Node.js SSR context.",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "prettier": "prettier -w .",
+    "check:ssr:ts": "tsx scripts/check-ssr-ts.ts"
+  },
+  "dependencies": {
+    "@knighted/jsx": "^1.6.0",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "linkedom": "^0.18.12",
+    "prettier": "^3.7.4",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "printWidth": 90,
+    "semi": false,
+    "singleQuote": true
+  }
+}
