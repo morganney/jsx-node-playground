@@ -7,10 +7,14 @@
   "private": true,
   "scripts": {
     "prettier": "prettier -w .",
-    "check:ssr:ts": "tsx scripts/check-ssr-ts.ts"
+    "check:ssr:ts": "tsx scripts/check-ssr-ts.ts",
+    "bundle": "rspack --config rspack.config.js",
+    "start": "node dist/server.js"
   },
   "dependencies": {
-    "@knighted/jsx": "^1.6.0",
+    "@knighted/jsx": "^1.6.3",
+    "@rspack/cli": "^1.7.0",
+    "@rspack/core": "^1.7.0",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "linkedom": "^0.18.12",
