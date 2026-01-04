@@ -22,3 +22,19 @@ A lightweight sandbox for exercising the `@knighted/jsx` DOM and React runtimes 
 | `npm run check:ssr:ts`                   | Executes the TypeScript version of the SSR smoke test via `tsx`, ensuring typings and DOM narrowing behave.                                      |
 
 Feel free to add new scripts that capture other runtime scenarios—just drop them under `scripts/` and document them here.
+
+## SSR + hydration demo
+
+1. Build the server and client bundles:
+
+   ```sh
+   npm run bundle
+   ```
+
+2. Start the server:
+
+   ```sh
+   npm start
+   ```
+
+3. Visit http://localhost:3000 to see the SSR shell hydrate on the client; refresh after edits and rerun the bundle step to pick up changes.
