@@ -1,4 +1,4 @@
-import { reactJsx } from '@knighted/jsx/node/react'
+import { reactJsx } from '@knighted/jsx/react'
 
 const Button = ({ label }: { label: string }) =>
   reactJsx`<button onClick={${() => {

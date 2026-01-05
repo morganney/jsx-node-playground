@@ -12,7 +12,7 @@
     "start": "node dist/server.js"
   },
   "dependencies": {
-    "@knighted/jsx": "^1.6.3",
+    "@knighted/jsx": "^1.7.1",
     "@rspack/cli": "^1.7.0",
     "@rspack/core": "^1.7.0",
     "@types/react": "^19.2.7",
