@@ -5,7 +5,8 @@
     "moduleResolution": "NodeNext",
     "lib": ["ES2022", "DOM"],
     "esModuleInterop": true,
-    "strict": true
+    "strict": true,
+    "types": ["@knighted/css/loader-queries"]
   },
   "include": ["scripts/**/*.ts", "src/**/*.ts"],
   "exclude": ["node_modules"]

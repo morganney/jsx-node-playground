@@ -23,6 +23,13 @@ const makeRules = jsxMode => [
           sourceMap: true,
         },
       },
+      {
+        resourceQuery: /knighted-css/,
+        loader: '@knighted/css/loader',
+        options: {
+          lightningcss: { minify: true },
+        },
+      },
     ],
   },
 ]
@@ -47,6 +54,7 @@ const serverConfig = defineConfig({
     server: './src/server.ts',
   },
   experiments: {
+    css: true,
     outputModule: true,
   },
   output: {
@@ -66,6 +74,7 @@ const clientConfig = defineConfig({
     client: './src/client.ts',
   },
   experiments: {
+    css: true,
     outputModule: true,
   },
   output: {

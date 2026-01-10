@@ -1,18 +1,39 @@
-# jsx-node-playground
+# Node.js SSR + Hydration using React without TSX files and native CSS
 
-A lightweight sandbox for exercising the `@knighted/jsx` DOM and React runtimes directly in Node.
+A Node.js SSR + hydration mini-app that pairs `@knighted/jsx` (React runtime) with `@knighted/css` (compiled styles). The server renders a styled button, inlines the extracted CSS, and the client hydrates the same markup.
 
-## Setup
+## Run the demo
 
-1. Install dependencies:
+1. Install deps (postinstall generates stable selector manifests and ambient types):
 
    ```sh
    npm install
    ```
 
-2. Run any of the scripts below to inspect the logs.
+2. Build server + client bundles via Rspack:
 
-## Available scripts
+   ```sh
+   npm run bundle
+   ```
+
+3. Start the SSR server and open the page:
+
+   ```sh
+   npm start
+   # visit http://localhost:3000
+   ```
+
+Edits to the button or styles: rerun `npm run bundle` then refresh.
+
+## What this shows
+
+- `@knighted/css` loader compiles `src/button.css` and the SSR layer inlines the CSS so the first paint is styled.
+- `@knighted/jsx` renders the same component tree on server and client; hydration attaches events without re-rendering.
+- Stable selectors/types are generated during `npm install` (`npm run generate:types`) so TS understands `?knighted-css` imports.
+
+## Scripts (reference)
+
+Basic scripts exercising some @knighted/jsx behavior.
 
 | Command                                  | Description                                                                                                                                      |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -20,21 +41,3 @@ A lightweight sandbox for exercising the `@knighted/jsx` DOM and React runtimes 
 | `node scripts/show-error-codeframes.mjs` | Throws parser errors to showcase the enhanced codeframes and line/column reporting.                                                              |
 | `node scripts/check-ssr.mjs`             | Runs the DOM helper plus the Node React helper to verify SSR output and hybrid shells.                                                           |
 | `npm run check:ssr:ts`                   | Executes the TypeScript version of the SSR smoke test via `tsx`, ensuring typings and DOM narrowing behave.                                      |
-
-Feel free to add new scripts that capture other runtime scenarios—just drop them under `scripts/` and document them here.
-
-## SSR + hydration demo
-
-1. Build the server and client bundles:
-
-   ```sh
-   npm run bundle
-   ```
-
-2. Start the server:
-
-   ```sh
-   npm start
-   ```
-
-3. Visit http://localhost:3000 to see the SSR shell hydrate on the client; refresh after edits and rerun the bundle step to pick up changes.
