@@ -1,3 +1,5 @@
 node_modules
 dist
 .knighted-css
+*.knighted-css.ts
+**/*.knighted-css.ts

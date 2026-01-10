@@ -6,7 +6,7 @@
     "lib": ["ES2022", "DOM"],
     "esModuleInterop": true,
     "strict": true,
-    "types": ["@knighted/css/loader-queries"]
+    "types": ["@types/node", "@knighted/css/loader-queries"]
   },
   "include": ["scripts/**/*.ts", "src/**/*.ts"],
   "exclude": ["node_modules"]

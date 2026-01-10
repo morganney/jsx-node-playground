@@ -11,7 +11,9 @@
     "bundle": "rspack --config rspack.config.js",
     "generate:types": "knighted-css-generate-types --root . --include src",
     "postinstall": "npm run generate:types",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "check-types": "tsc --noEmit",
+    "precheck-types": "npm run generate:types"
   },
   "dependencies": {
     "@knighted/css": "^1.0.9",
