@@ -1,9 +1,5 @@
 import { reactJsx } from '@knighted/jsx/react'
-
-const Button = ({ label }: { label: string }) =>
-  reactJsx`<button onClick={${() => {
-    alert('Button clicked')
-  }}}>${label}</button>`
+import { Button } from './button.js'
 
 export const App = ({ name }: { name: string }) =>
   reactJsx`<main><h1>Hello, ${name}</h1><${Button} label="Tap me" /></main>`

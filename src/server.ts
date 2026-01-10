@@ -1,4 +1,4 @@
-import http from 'node:http'
+import http, { type IncomingMessage, ServerResponse } from 'node:http'
 import fs from 'node:fs'
 import path from 'node:path'
 import { render } from './render.js'
@@ -9,7 +9,7 @@ const clientBundlePath = [
 ].find(candidate => fs.existsSync(candidate))
 
 http
-  .createServer((req, res) => {
+  .createServer((req: IncomingMessage, res: ServerResponse) => {
     if (req.url === '/client.js') {
       if (!clientBundlePath) {
         res.statusCode = 500
