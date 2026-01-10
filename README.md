@@ -1,4 +1,4 @@
-# Node.js SSR + Hydration using React without TSX files and native CSS
+# Node.js SSR + Hydration using React without TSX or JSX files
 
 A Node.js SSR + hydration mini-app that pairs `@knighted/jsx` (React runtime) with `@knighted/css` (compiled styles). The server renders a styled button, inlines the extracted CSS, and the client hydrates the same markup.
 
