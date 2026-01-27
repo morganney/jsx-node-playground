@@ -16,8 +16,8 @@
     "precheck-types": "npm run generate:types"
   },
   "dependencies": {
-    "@knighted/css": "^1.0.9",
-    "@knighted/jsx": "^1.7.1",
+    "@knighted/css": "^1.1.1",
+    "@knighted/jsx": "^1.7.5",
     "@rspack/cli": "^1.7.0",
     "@rspack/core": "^1.7.0",
     "@types/react": "^19.2.7",
